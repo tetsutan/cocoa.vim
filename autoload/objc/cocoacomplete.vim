@@ -89,7 +89,7 @@ endf
 
 " Adds item to the completion menu if they match the base.
 fun s:Complete(base, items)
-	if neocomplcache#is_enabled()
+	if exists('*neocomplcache#is_enabled') && neocomplcache#is_enabled()
 		return ''
 	endif
 	for item in a:items
